@@ -1,7 +1,6 @@
 pipeline {
     agent any
-     }
-    stages {
+     stages {
         stage('Git Checkout') {
             steps {
               git branch: 'main', url: 'https://github.com/Vaibhav2406/Ansible.git'
