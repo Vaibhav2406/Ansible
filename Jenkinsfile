@@ -1,6 +1,6 @@
 pipeline {
     agent {
-    node('master') 
+    node('any') 
      }
     stages {
         stage('Git Checkout') {
@@ -14,7 +14,7 @@ pipeline {
               ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'Inv', playbook: 'Ansible/Git.yml'
             }
            
-         }
+          }
         
        }
     }
