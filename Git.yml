@@ -10,5 +10,10 @@
    - name: checking_git_version
      shell: git --version
      register: GitOut
-   - debug: 
+   - debug:
        var: GitOut.stdout_lines
+   - name: check service status
+     shell: systemctl
+     register: Serviceout
+   - debug:
+       var: Serviceout.stdout_lines
