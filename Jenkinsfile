@@ -15,7 +15,7 @@ pipeline {
           }
          stage('Checking service on server') {
             steps {
-              ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'Inv', playbook: 'ServiceCheck.yml' --tags: 'Post-deployment'
+              ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'Inv', playbook: 'ServiceCheck.yml' --tags: $tags
             }
            
           }
