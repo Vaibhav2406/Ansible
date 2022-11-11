@@ -1,5 +1,6 @@
 - name: GitInstall
   hosts: all
+  tags: Pre-deployment
   become: yes
   tasks:
    - name: InstallingGIT
@@ -7,8 +8,11 @@
       update_cache: yes
       name: git
       state: present
-   - name: checking_git_version
-     shell: git --version
-     register: GitOut
-   - debug:
-       var: GitOut.stdout_lines
+
+ - name: checking_git_version
+   hosts: all
+   tags: Post-deployment
+   shell: git --version
+   register: GitOut
+ - debug:
+      var: GitOut.stdout_lines
