@@ -8,8 +8,7 @@
       update_cache: yes
       name: git
       state: present
-
- - name2: Running post verification
+      
    hosts: all
    tags: Post-deployment
    tasks:
