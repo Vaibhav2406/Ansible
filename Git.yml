@@ -9,10 +9,12 @@
       name: git
       state: present
 
- - name: checking_git_version
+ - name: Running post verification
    hosts: all
    tags: Post-deployment
-   shell: git --version
-   register: GitOut
- - debug:
-      var: GitOut.stdout_lines
+   tasks:
+    - name: Checcking Installed version
+      shell: git --version
+      register: GitOut
+    - debug:
+         var: GitOut.stdout_lines
