@@ -8,12 +8,3 @@
       update_cache: yes
       name: git
       state: present
-      
-   hosts: all
-   tags: Post-deployment
-   tasks:
-    - name: Checcking Installed version
-      shell: git --version
-      register: GitOut
-    - debug:
-         var: GitOut.stdout_lines
