@@ -10,7 +10,6 @@ pipeline {
         }
         stage('Installing tools on slave') {
             steps {
-              echo "Selected verification type is: $(params.tags)"
               ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, --extra-vars '{"tags":"${params.tags}"}' installation: 'Ansible', inventory: 'Inv', playbook: 'Git.yml'
             }
            
