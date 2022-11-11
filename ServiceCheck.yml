@@ -1,8 +1,6 @@
 - name: Checking Services
   hosts: all
   become: yes
-  vars:
-   - tags: Pre-deployment
   tasks:
    - name: checking_git_version
      shell: git --version
