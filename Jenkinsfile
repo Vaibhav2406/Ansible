@@ -13,7 +13,7 @@ pipeline {
             }
            
           }
-         stage('Installing tools on slave') {
+         stage('Service Checking') {
             steps {
               ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, extras: 'Post-deployment', installation: 'Ansible', inventory: 'Inv', playbook: 'ServiceCheck.yml'
             }
