@@ -1,0 +1,10 @@
+- name: Checking Services
+  hosts: all
+  become: yes
+  tags: Post_deployment
+  tasks:
+   - name: checking_git_version
+     shell: git --version
+     register: GitOut
+   - debug:
+       var: GitOut.stdout_lines
