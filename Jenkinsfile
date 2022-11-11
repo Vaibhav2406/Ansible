@@ -16,7 +16,7 @@ pipeline {
                 ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'Inv', playbook: 'Git.yml'
             }
         }
-        stage ('Installing Git') {
+        stage ('Checking Git Version') {
             when {
                 expression { params.Verification_Type == 'Post-verification' }
             }
