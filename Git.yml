@@ -8,11 +8,11 @@
       name: git
       state: present
   tags:
-   - Post-deployment
+    - Post-deployment
    - name: checking_git_version
      shell: git --version
      register: GitOut
    - debug:
        var: GitOut.stdout_lines
   tags:
-   - Pre-deployment
+    - Pre-deployment
