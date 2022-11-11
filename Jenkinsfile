@@ -4,8 +4,8 @@ pipeline {
     
     parameters{
         choice(
-        description: 'SelectType'
-        name: 'tags'
+        description: 'SelectType',
+        name: 'tags',
             choices: ['Pre-deployment','Post-deployment']    
         )
     }
