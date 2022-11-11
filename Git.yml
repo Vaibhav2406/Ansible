@@ -14,5 +14,3 @@
      register: GitOut
    - debug:
        var: GitOut.stdout_lines
-  tags:
-   - Pre_deployment
