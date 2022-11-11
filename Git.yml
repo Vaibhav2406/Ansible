@@ -9,7 +9,7 @@
       name: git
       state: present
 
- - name: Running post verification
+ - name2: Running post verification
    hosts: all
    tags: Post-deployment
    tasks:
