@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Installing tools on slave') {
             steps {
-              """ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true , --extra-vars '{"tags":"${params.Pre-deployment}"}', installation: 'Ansible', inventory: 'Inv', playbook: 'Git.yml'
+              ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true , --extra-vars '{"tags":"${params.Pre-deployment}"}', installation: 'Ansible', inventory: 'Inv', playbook: 'Git.yml'
             }
            
           }
