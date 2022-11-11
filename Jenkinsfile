@@ -9,13 +9,13 @@ pipeline {
         }
         stage('Installing tools on slave') {
             steps {
-              ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, -t Pre-deployment , installation: 'Ansible', inventory: 'Inv', playbook: 'Git.yml'
+              ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true , installation: 'Ansible', inventory: 'Inv', playbook: 'Git.yml' -t 'Pre-deployment'
             }
            
           }
          stage('Service Checking') {
             steps {
-              ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, -t Post-deployment , installation: 'Ansible', inventory: 'Inv', playbook: 'ServiceCheck.yml'
+              ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true , installation: 'Ansible', inventory: 'Inv', playbook: 'ServiceCheck.yml'  -t 'Post-deployment'
             }
            
           }
