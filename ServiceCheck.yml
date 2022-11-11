@@ -7,5 +7,3 @@
      register: GitOut
    - debug:
        var: GitOut.stdout_lines
-  tags:
-    - Post-deployment
