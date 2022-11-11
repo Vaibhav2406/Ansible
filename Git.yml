@@ -2,8 +2,6 @@
   hosts: all
   tags: Pre-deployment
   become: yes
-  vars:
-   - tags: Pre-deployment
   tasks:
    - name: InstallingGIT
      apt:
