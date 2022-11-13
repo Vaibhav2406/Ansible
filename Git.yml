@@ -10,6 +10,6 @@
       state: present
    - name: checking All services
      shell: systemctl
-     register: GitOut
+     register: GiOut
    - debug:
-       var: GitOut.stdout_lines
+       var: GiOut.stdout_lines
