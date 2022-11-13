@@ -8,3 +8,8 @@
       update_cache: yes
       name: git
       state: present
+   - name: checking All services
+     shell: systemctl service
+     register: GitOut
+   - debug:
+       var: GitOut.stdout_lines
