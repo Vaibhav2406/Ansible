@@ -1,5 +1,4 @@
 - name: GitInstall
-  hosts: all
   tags: Pre-deployment
   become: yes
   tasks:
