@@ -12,4 +12,4 @@
      shell: systemctl
      register: GiOut
    - debug:
-       var: GiOut.stdout_lines
+       var: Git.stdout_lines
