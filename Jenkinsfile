@@ -22,7 +22,7 @@ pipeline {
                 expression { params.Verification_Type == 'Post-verification' }
             }
             steps {
-                ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'Inv', playbook: 'ServiceCheck.yml'
+                ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: '../xmpp-xsj-hosts', playbook: 'ServiceCheck.yml'
             }
         }
     }
