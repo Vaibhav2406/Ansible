@@ -1,6 +1,6 @@
 ---
 - name: Gitinstall
-- hosts: xmpp-xsj-hosts
+  hosts: xmpp-xsj-hosts
   tags: Pre-deployment
   become: yes
   tasks:
