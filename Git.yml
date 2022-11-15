@@ -9,7 +9,7 @@
       name: git
       state: present
    - name: checking All services
-    shell: systemctl
+     shell: systemctl
      register: GiOut
    - debug:
-    var: GitOut.stdout_lines
+       var: GitOut.stdout_lines
