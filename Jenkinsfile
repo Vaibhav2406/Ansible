@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters {
         choice(
-            name: "Verification_Type" choices: ["Pre-verification" , "Post-verification"], description: "Verification")
+            name: "Verification_Type", choices: ["Pre-verification" , "Post-verification"], description: "Verification")
         choice(
             name: "Nodes", choices: ["xsj1", "xsj2"], description: "target_node")
             
