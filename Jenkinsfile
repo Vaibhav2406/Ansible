@@ -13,7 +13,7 @@ pipeline {
                 expression { params.Verification_Type == 'Pre-verification' }
             }
             steps {
-                ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'Inv', playbook: 'Git.yml'
+                ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'Inv', playbook: 'Git.yml' , --limit=xsj2
             }
         }
         stage ('Checking Git Version') {
