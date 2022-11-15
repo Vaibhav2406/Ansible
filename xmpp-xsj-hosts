@@ -1,3 +1,7 @@
+[xmpp-xsj-hosts:children]
+xsj1
+xsj2
+
 [xsj1]
 172.31.89.87 ansible_user=devops ansible_ssh_pass=Today@1234
 
