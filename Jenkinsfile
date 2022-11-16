@@ -12,7 +12,7 @@ pipeline {
         
         stage ('Updating workspace directory') {
             steps {
-                dir("/home/ubuntu/testv/repos/Ansible") {
+                dir("/tmp/Ansible") {
                     sh "pwd"
                  }
             }
