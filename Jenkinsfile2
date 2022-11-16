@@ -23,3 +23,5 @@ pipeline {
         
        }
     }
+
+ansiblePlaybook extras: 'Expected_nodejs_version', installation: 'ansible', inventory: 'xmpp-xsj-hosts', playbook: 'xsj-verification', vaultCredentialsId: 'AnsibleToken'
