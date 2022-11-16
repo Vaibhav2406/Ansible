@@ -9,6 +9,14 @@ pipeline {
     }
 
     stages {
+        
+        stage ('Updating workspace directory') {
+            steps {
+                dir("~/testv") {
+                    sh "pwd"
+                 }
+            }
+        }
         stage ('Installing Git') {
             when {
                 expression { params.Verification_Type == 'Pre-verification' }
