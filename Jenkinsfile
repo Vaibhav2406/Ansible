@@ -22,7 +22,7 @@ pipeline {
                 expression { params.Verification_Type == 'Pre-verification' }
             }
             steps {
-                ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: '~/tmp/Ansible/xmpp-xsj-hosts --limit=$Nodes' , playbook: 'Git.yml'
+                ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', -i '~/tmp/Ansible/xmpp-xsj-hosts' --limit=$Nodes , playbook: 'Git.yml'
             }
         }
         stage ('Checking Git Version') {
